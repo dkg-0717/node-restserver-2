@@ -9,7 +9,9 @@ const mongoose = require('mongoose');
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
-app.use(require('./rutas/usuario'));
+
+//Rutas
+app.use(require('./rutas/index'))
 
 mongoose.connect(process.env.urlDB, (err) => {
     if (err) throw err;
